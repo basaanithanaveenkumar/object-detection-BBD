@@ -10,11 +10,13 @@ This project focuses on object detection using the Berkeley DeepDrive (BDD100K) 
 ```bash
 # Download and extract dataset
 python scripts/download_dataset.py
+```
 
 # Organize directory structure
+```bash
 mkdir -p data
 mv data/100k/val data/100k/valid
-
+```
 # Project Overview
 
 ## Installation
@@ -23,7 +25,7 @@ Install the required dependencies using:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 
 ## Class-wise Statistics
@@ -32,7 +34,7 @@ To get class-wise statistics, run the following script:
 
 ```bash
 python scripts/get_stats_classwise.py
-
+```
 
 
 
