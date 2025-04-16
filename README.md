@@ -1,87 +1,111 @@
-# object-detection-BBD
+# Object Detection on BDD100K Dataset
 
-Link to Download the datset http://bdd-data.berkeley.edu/download.html (GUI)
+[![Dataset Download](https://img.shields.io/badge/Download-BDD100K_Dataset-blue)](http://bdd-data.berkeley.edu/download.html)
 
+This project focuses on object detection using the Berkeley DeepDrive (BDD100K) dataset, featuring analysis of class distributions, occlusion patterns, and model development.
 
-run  the below command to download  and extract the dataet 
+## 🛠️ Setup
 
-python scripts/download_dataset.py 
+### Dataset Preparation
+```bash
+# Download and extract dataset
+python scripts/download_dataset.py
 
-
-mkir data
+# Organize directory structure
+mkdir -p data
 mv data/100k/val data/100k/valid
 
-Installation
-what needs to be installed 
+# Project Overview
 
-run 
+## Installation
 
+Install the required dependencies using:
+
+```bash
 pip install -r requirements.txt
 
 
-# get the stats class wise
 
-python scripts/get_stats_classwise.py 
+## Class-wise Statistics
 
-# image resolution size in dataset
-1280x720
+To get class-wise statistics, run the following script:
 
-# observation
-  --- imballance in the classes distribution
-
-# training analysis
-# usecase specific calsses (10 classes)
-car: 714121
-traffic sign: 239961
-traffic light: 186301
-person: 91435
-truck: 30012
-bus: 11688
-bike: 7227
-rider: 4522
-motor: 3002
-train: 136
-
-
-
-# all classes 
-
-car: 714121
-lane/single white: 247108
-traffic sign: 239961
-traffic light: 186301
-lane/road curb: 109868
-lane/crosswalk: 108284
-person: 91435
-area/drivable: 64050
-area/alternative: 61799
-lane/double yellow: 37519
-truck: 30012
-lane/single yellow: 20220
-bus: 11688
-bike: 7227
-lane/double white: 5674
-rider: 4522
-motor: 3002
-lane/single other: 249
-train: 136
-lane/double other: 26
-area/unknown: 2
-
-# occulusion analysis on all classes ( seems half of them are occluded) 
-Attribute: occluded
-  false: 678981
-  true: 609424
+```bash
+python scripts/get_stats_classwise.py
 
 
 
 
-# get the stats scene  wise
-
-python scripts/get_stats_sceneiwise.py 
 
 
-#TODO Need to save the plots instead of displaying it
+
+
+
+## Training Analysis
+
+### Use Case Specific Classes (10 Classes)
+
+| Class         | Count    |
+|---------------|----------|
+| Car           | 714,121  |
+| Traffic Sign  | 239,961  |
+| Traffic Light | 186,301  |
+| Person        | 91,435   |
+| Truck         | 30,012   |
+| Bus           | 11,688   |
+| Bike          | 7,227    |
+| Rider         | 4,522    |
+| Motor         | 3,002    |
+| Train         | 136      |
+
+
+## All Classes Distribution
+
+| Class                   | Count    |
+|-------------------------|----------|
+| Car                     | 714,121  |
+| Lane/Single White       | 247,108  |
+| Traffic Sign            | 239,961  |
+| Traffic Light           | 186,301  |
+| Lane/Road Curb          | 109,868  |
+| Lane/Crosswalk          | 108,284  |
+| Person                  | 91,435   |
+| Area/Drivable           | 64,050   |
+| Area/Alternative        | 61,799   |
+| Lane/Double Yellow      | 37,519   |
+| Truck                   | 30,012   |
+| Lane/Single Yellow      | 20,220   |
+| Bus                     | 11,688   |
+| Bike                    | 7,227    |
+| Lane/Double White       | 5,674    |
+| Rider                   | 4,522    |
+| Motor                   | 3,002    |
+| Lane/Single Other       | 249      |
+| Train                   | 136
+
+## Occlusion Analysis
+
+An analysis was performed on all classes with respect to the **`occluded`** attribute. Results show that nearly half of the objects are occluded.
+
+### Occlusion Statistics
+
+| Occlusion Status | Count    |
+|------------------|----------|
+| False            | 678,981  |
+| True             | 609,424  |
+
+⚠️ **Observation:** A significant portion of the dataset contains occluded objects, which may impact detection accuracy and should be considered during model training and evaluation.
+
+
+
+
+## Scene-wise Statistics
+
+To generate scene-wise statistics, run the following script:
+
+```bash
+python scripts/get_stats_sceneiwise.py
+
 
 
 
