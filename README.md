@@ -41,9 +41,10 @@ python scripts/get_stats_classwise.py
 
 
 
+![Train dataset Analusis](images/Screenshot%202025-04-12%20at%208.04.38%20PM.png)
 
 
-## Training Analysis
+## Training dataset  Analysis
 
 ### Use Case Specific Classes (10 Classes)
 
@@ -107,8 +108,7 @@ To generate scene-wise statistics, run the following script:
 
 ```bash
 python scripts/get_stats_sceneiwise.py
-
-
+```
 
 
 # need to understand the stats for this 
