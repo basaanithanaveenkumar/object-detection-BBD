@@ -41,10 +41,12 @@ python scripts/get_stats_classwise.py
 
 
 
-![Train dataset Analusis](images/Screenshot%202025-04-12%20at%208.04.38%20PM.png)
+
 
 
 ## Training dataset  Analysis
+![Train dataset Analusis](images/Screenshot%202025-04-12%20at%208.04.38%20PM.png)
+
 
 ### Use Case Specific Classes (10 Classes)
 
