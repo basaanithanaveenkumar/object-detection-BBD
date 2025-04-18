@@ -28,8 +28,9 @@ for dir_path in dir_list:
     }
 
     category_dict = {}
-    current_category_id = 1
+    current_category_id = 0
     annotation_id = 1
+    class_list=["car","traffic sign","traffic light","person","truck","bus","bike","rider","motor","train"]
 
     # Collect all annotation files
     annotation_files = [f for f in os.listdir(annotations_dir) if f.endswith('.json')]
@@ -71,8 +72,9 @@ for dir_path in dir_list:
         # Process each object in the annotation
         
         for obj in bdd_data['frames'][0]["objects"]:
-            #print(obj)
             category_name = obj.get('category', '').strip().lower()  # Normalize category name
+            if category_name not in class_list:
+                continue
             if not category_name:
                 continue
 

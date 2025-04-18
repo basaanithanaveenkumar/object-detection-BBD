@@ -9,12 +9,12 @@ This project focuses on object detection using the Berkeley DeepDrive (BDD100K) 
 ### Dataset Preparation
 ```bash
 # Download and extract dataset
+mkdir -p data
 python scripts/download_dataset.py
 ```
 
 # Organize directory structure
 ```bash
-mkdir -p data
 mv data/100k/val data/100k/valid
 ```
 # Project Overview
