@@ -145,15 +145,15 @@ python scripts/get_stats_sceneiwise.py
 ```
 
 
-## Training using RF-DETR
+## convert the dataset into microsoft coco
 
-To train the model using RF-DETR, run the following script:
+To train the model using RF-DETR, it need to be converted into coco:
 
 ```bash
-python scripts/train_rfdetr.py
+python scripts/convert_to_coco.py
 ```
 
-## script to visualize the GT & predictions based on ID (COCO based)
+## script to visualize the GT  based on ID (COCO based)
 
 To visualize the bboxes, run the following script:
 
@@ -163,3 +163,15 @@ python scripts/visualize_image.py
 ```
 
 ![sample](<images/Screenshot 2025-04-18 at 8.46.28 PM.png>)
+
+
+## Training using RF-DETR
+
+To train the model using RF-DETR, run the following script:
+
+```bash
+python scripts/train_rfdetr.py
+```
+
+## References
+- [RF-DETR Paper](https://arxiv.org/abs/2304.08069) - Real-time object detection using Transformers
