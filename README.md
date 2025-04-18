@@ -152,3 +152,14 @@ To train the model using RF-DETR, run the following script:
 ```bash
 python scripts/train_rfdetr.py
 ```
+
+## script to visualize the GT & predictions based on ID (COCO based)
+
+To visualize the bboxes, run the following script:
+
+```bash
+# please modify your script according to your needs
+python scripts/visualize_image.py 
+```
+
+![sample](<images/Screenshot 2025-04-18 at 8.46.28 PM.png>)
