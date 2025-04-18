@@ -6,6 +6,14 @@ This project focuses on object detection using the Berkeley DeepDrive (BDD100K) 
 
 ## 🛠️ Setup
 
+
+```bash
+# clone 
+git cloen https://github.com/basaanithanaveenkumar/object-detection-BBD.git
+cd object-detection-BBD
+```
+
+
 ### Dataset Preparation
 ```bash
 # Download and extract dataset
@@ -127,10 +135,20 @@ An analysis was performed on all classes with respect to the **`occluded`** attr
 
 
 
+
 ## Scene-wise Statistics
 
 To generate scene-wise statistics, run the following script:
 
 ```bash
 python scripts/get_stats_sceneiwise.py
+```
+
+
+## Training using RF-DETR
+
+To train the model using RF-DETR, run the following script:
+
+```bash
+python scripts/train_rfdetr.py
 ```
