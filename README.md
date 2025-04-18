@@ -103,6 +103,29 @@ An analysis was performed on all classes with respect to the **`occluded`** attr
 
 
 
+# Additional training Dataset Analysis
+
+## Bounding Box Size Distribution
+
+| Size Category       | Percentage | Interpretation                                                                 |
+|---------------------|------------|-------------------------------------------------------------------------------|
+| **Small** (<2% area) | 92.2%      | Dominates dataset - consider higher resolution or small object detection techniques |
+| **Medium** (2-10%)  | 6.3%       | Underrepresented - may need augmentation                                      |
+| **Large** (>10%)    | 1.5%       | Very rare - ensure model can handle context                                   |
+
+**Recommendations:**
+- Implement multi-scale training
+- Use Feature Pyramid Networks (FPN)
+
+## Bounding Box Aspect Ratios
+
+| Aspect Ratio        | Percentage | Interpretation                                                                 |
+|---------------------|------------|-------------------------------------------------------------------------------|
+| **Tall** (<0.5)     | 12.3%      | Vertical objects present - adjust anchor boxes                                |
+| **Square** (0.5-2)  | 76.9%      | Majority class - standard anchors should work well                            |
+| **Wide** (≥2)       | 10.8%      | Horizontal objects - may need custom anchors                                 |
+
+
 
 ## Scene-wise Statistics
 
