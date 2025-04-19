@@ -9,7 +9,7 @@ This project focuses on object detection using the Berkeley DeepDrive (BDD100K) 
 
 ```bash
 # clone 
-git cloen https://github.com/basaanithanaveenkumar/object-detection-BBD.git
+git clone https://github.com/basaanithanaveenkumar/object-detection-BBD.git
 cd object-detection-BBD
 ```
 
