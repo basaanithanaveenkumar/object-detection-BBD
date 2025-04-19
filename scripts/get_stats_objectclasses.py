@@ -91,7 +91,7 @@ if __name__ == "__main__":
         class_dist, class_attr_counts, global_attr_counts = analyze_json_files(folder_path)
         print_stats(class_dist, class_attr_counts, global_attr_counts)
     print (" class wise stats for validation ")
-    folder_path = "data/100k/val"
+    folder_path = "data/100k/valid"
     
     if not os.path.isdir(folder_path):
         print("Invalid folder path.")

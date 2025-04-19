@@ -44,9 +44,30 @@ To get class-wise statistics, run the following script:
 python scripts/get_stats_classwise.py
 ```
 
+## scene-wise Statistics
+
+To get scene-wise statistics, run the following script:
+
+```bash
+python scripts/get_stats_scenewise.py
 
 
+```
+## Class distribution Statistics
 
+To get Class distribution, run the following script:
+
+```bash
+python scripts/get_stats_dist.py
+```
+
+# training distribution
+
+![Train dataset distribution](images/train-distribution.png)
+
+# validation distribution
+
+![validation dataset distribution](images/validation-distribution.png)
 
 
 
@@ -113,6 +134,15 @@ An analysis was performed on all classes with respect to the **`occluded`** attr
 
 # Additional training Dataset Analysis
 
+## Statistics on BBOX size and aspect ratio
+
+To get BBOX distribution statstics, run the following script:
+
+```bash
+python scripts/get_additional_analysis.py
+```
+
+
 ## Bounding Box Size Distribution
 
 | Size Category       | Percentage | Interpretation                                                                 |
@@ -175,3 +205,30 @@ python scripts/train_rfdetr.py
 
 ## References
 - [RF-DETR Paper](https://arxiv.org/abs/2304.08069) - Real-time object detection using Transformers
+
+
+
+## Notes
+    Model training
+    sampling techniques to balance dataset
+       --- as the dataset is imbalanced
+    tweak the focal loss
+    data aggumentation
+       -- 
+    Hyper parameter tunning
+    change the backbone
+    bapatite matching based architecture
+
+
+#    Key metrics
+
+    Mean Average Precision (mAP) - Standard for COCO/PASCAL VOC
+
+    Precision-Recall Curves - Trade-off analysis
+
+    F1 Score - Balanced precision/recall
+
+    Inference Speed (FPS) - Critical for real-time applications (self-driving)
+    
+
+    

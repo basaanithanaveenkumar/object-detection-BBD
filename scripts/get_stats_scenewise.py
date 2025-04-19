@@ -108,7 +108,7 @@ if __name__ == '__main__':
 
     print("printing the stats for val set")
     # Path to your train folder containing JSON files
-    train_folder = 'data/100k/val'
+    train_folder = 'data/100k/valid'
     
     # Get statistics
     attribute_stats, total_files = get_attribute_stats(train_folder)
