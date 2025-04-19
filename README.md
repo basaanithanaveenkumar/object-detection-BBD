@@ -5,7 +5,7 @@
 This project focuses on object detection using the Berkeley DeepDrive (BDD100K) dataset, featuring analysis of class distributions, occlusion patterns, and model development.
 
 ## 🛠️ Setup
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q0-3MbEBTthbimI9UnCrwq5dI0m17Otf?usp=sharing)
 
 ```bash
 # clone 
