@@ -28,7 +28,7 @@ for dir_path in dir_list:
     }
 
     category_dict = {}
-    current_category_id = 0
+    current_category_id = 1
     annotation_id = 1
     class_list=["car","traffic sign","traffic light","person","truck","bus","bike","rider","motor","train"]
 
