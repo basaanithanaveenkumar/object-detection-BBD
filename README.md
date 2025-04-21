@@ -14,6 +14,16 @@ cd object-detection-BBD
 ```
 
 
+### Docker Build and run
+```bash
+sudo docker build -t object-detection .
+#run the docker
+sudo docker run -it --rm --gpus all object-detection /bin/bash
+
+```
+
+
+
 ### Dataset Preparation
 ```bash
 # Download and extract dataset
