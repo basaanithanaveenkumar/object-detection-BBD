@@ -15,8 +15,8 @@ img = coco.loadImgs(img_id)[0]
 
 # Use local image path
 image_path = f"{dataDir}/{img['file_name']}"
-I = cv2.imread(image_path)
-I = cv2.cvtColor(I, cv2.COLOR_BGR2RGB)
+image_arr = cv2.imread(image_path)
+image_arr = cv2.cvtColor(image_arr, cv2.COLOR_BGR2RGB)
 
 # Get all category information
 cats = coco.loadCats(coco.getCatIds())
@@ -36,17 +36,17 @@ for ann in anns:
     x, y, w, h = ann["bbox"]
     cat_id = ann["category_id"]
     color = colors[cat_id]
-    cv2.rectangle(I, (int(x), int(y)), (int(x + w), int(y + h)), color, 2)
+    cv2.rectangle(image_arr, (int(x), int(y)), (int(x + w), int(y + h)), color, 2)
 
     # Add class label text
     cat = coco.loadCats([cat_id])[0]
     label = cat["name"]
     cv2.putText(
-        I, label, (int(x), int(y - 10)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2
+        image_arr, label, (int(x), int(y - 10)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2
     )
 
 # Display the image
 plt.figure(figsize=(12, 8))
-plt.imshow(I)
+plt.imshow(image_arr)
 plt.axis("off")
 plt.show()
