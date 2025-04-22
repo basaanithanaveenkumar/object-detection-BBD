@@ -170,7 +170,7 @@ python scripts/get_additional_analysis.py
 | Aspect Ratio        | Percentage | Interpretation                                                                 |
 |---------------------|------------|-------------------------------------------------------------------------------|
 | **Tall** (<0.5)     | 12.3%      | Vertical objects present - adjust anchor boxes                                |
-| **Square** (0.5-2)  | 76.9%      | Majority class - standard anchors should work well                            |
+| **Square & rectangle ** (0.5-2)  | 76.9%      | Majority class - standard anchors should work well                            |
 | **Wide** (≥2)       | 10.8%      | Horizontal objects - may need custom anchors                                 |
 
 
