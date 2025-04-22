@@ -5,12 +5,8 @@ from supervision.metrics import MeanAveragePrecision
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 
-model = RFDETRBase(
-    resolution=560,
-    num_classes=10,
-    pretrain_weights="/home/basaanithanaveenkumar/object-detection-BBD/experiments/v1/checkpoint0002.pth",
-)  # resolution shoud be divisible by 56
-if __name__ == "__main__":
+model = RFDETRBase(resolution=560,num_classes=10,pretrain_weights = "experiments/v1/checkpoint0003.pth",) # resolution shoud be divisible by 56
+if __name__ == '__main__':
     import multiprocessing
 
     multiprocessing.set_start_method("spawn", force=True)

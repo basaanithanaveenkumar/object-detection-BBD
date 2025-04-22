@@ -23,25 +23,12 @@ for dir_path in dir_list:
         "licenses": [],
         "images": [],
         "annotations": [],
-        "categories": [],
+        "categories": [{"id":0,"name":"object_detection_bbd","supercategory":"none"}] # define super catogory
     }
-
     category_dict = {}
     current_category_id = 1
     annotation_id = 1
-    class_list = [
-        "car",
-        "traffic sign",
-        "traffic light",
-        "person",
-        "truck",
-        "bus",
-        "bike",
-        "rider",
-        "motor",
-        "train",
-    ]
-
+    class_list=["car","traffic sign","traffic light","person","truck","bus","bike","rider","motor","train"]
     # Collect all annotation files
     annotation_files = [f for f in os.listdir(annotations_dir) if f.endswith(".json")]
 
@@ -89,24 +76,11 @@ for dir_path in dir_list:
                 continue
             if not category_name:
                 continue
-
-            # Update category dictionary
-            if category_name not in category_dict:
-                category_dict[category_name] = current_category_id
-                coco["categories"].append(
-                    {
-                        "id": current_category_id,
-                        "name": category_name,
-                        "supercategory": "none",
-                    }
-                )
-                current_category_id += 1
-
             category_id = category_dict[category_name]
-            # import pdb;pdb.set_trace()
-            # Extract and validate bounding box
-            bbox = obj.get("box2d", {})
-            required_keys = ["x1", "y1", "x2", "y2"]
+
+            # Extract and validate bounding box 
+            bbox = obj.get('box2d', {})
+            required_keys = ['x1', 'y1', 'x2', 'y2']
             if not all(key in bbox for key in required_keys):
                 continue
 
