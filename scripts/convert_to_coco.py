@@ -29,6 +29,15 @@ for dir_path in dir_list:
     current_category_id = 1
     annotation_id = 1
     class_list=["car","traffic sign","traffic light","person","truck","bus","bike","rider","motor","train"]
+    category_dict = {item: idx + 1 for idx, item in enumerate(class_list)}
+    print(category_dict)
+    for category_id, category_name in enumerate(class_list,start=1):
+        class_dict = {
+            "id": category_id,
+            "name": category_name,
+            "supercategory": "object_detection_bbd"  # Note: Fixed typo from your example
+        }
+        coco['categories'].append(class_dict)
     # Collect all annotation files
     annotation_files = [f for f in os.listdir(annotations_dir) if f.endswith(".json")]
 
