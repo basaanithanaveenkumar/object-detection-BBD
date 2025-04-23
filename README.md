@@ -221,7 +221,7 @@ python scripts/train_rfdetr.py
 Below are the key evaluation metrics and visualizations from from RF-DETR model:
 
 ## 1. Confusion Matrix
-![Confusion Matrix](images/confusion_matrix_eval.png)  
+![Confusion Matrix](images/confession_matirx_eval.png)  
 **Description**: The confusion matrix shows the model's classification performance across different classes. High diagonal values indicate correct predictions, while off-diagonal values represent misclassifications.
 
 ## 2. Detection Grid
