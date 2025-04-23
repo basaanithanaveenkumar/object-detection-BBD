@@ -216,6 +216,24 @@ python scripts/train_rfdetr.py
 ## References
 - [RF-DETR Paper](https://arxiv.org/abs/2304.08069) - Real-time object detection using Transformers
 
+# Model Evaluation Results
+
+Below are the key evaluation metrics and visualizations from from RF-DETR model:
+
+## 1. Confusion Matrix
+![Confusion Matrix](images/confusion_matrix_eval.png)  
+**Description**: The confusion matrix shows the model's classification performance across different classes. High diagonal values indicate correct predictions, while off-diagonal values represent misclassifications.
+
+## 2. Detection Grid
+![Detection Grid](images/detections_grid.png)  
+
+## 3. Predictions vs. Annotations
+![Detections vs. Annotations](images/detections_vs_annotation.png)  
+**Description**: Side-by-side overlay of predicted bounding boxes (red) and ground truth (green). 
+## 4. mAP Scores
+![mAP Scores](images/mAP_scores_Eval.png)  
+**Description**: Mean Average Precision (mAP) across IoU thresholds. Higher mAP (close to 1.0) indicates better detection accuracy.
+
 
 
 ## Notes
