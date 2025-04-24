@@ -213,8 +213,6 @@ To train the model using RF-DETR, run the following script:
 python scripts/train_rfdetr.py
 ```
 
-## References
-- [RF-DETR Paper](https://arxiv.org/abs/2304.08069) - Real-time object detection using Transformers
 
 # Model Evaluation Results
 
