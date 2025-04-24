@@ -212,6 +212,50 @@ To train the model using RF-DETR, run the following script:
 ```bash
 python scripts/train_rfdetr.py
 ```
+## Visualizations & Key Concepts
+
+
+### 1. Vision Transformer (ViT) Adaptations
+#### Modified Architecture
+![ViT](images/vit.png)  
+
+
+![Modified ViT](images/modified_vit.png)  
+**Description**: Custom ViT architecture with hierarchical features through global and windowed attention
+
+#### Patch Projection
+![ViT Projection](images/vit_projection.png)  
+---
+
+
+### 2. DINO (Self-Supervised Learning Framework)
+![DINO](images/DINO.png)  
+**Description**: Architecture of the DINO self-supervised learning framework, which uses knowledge distillation with a teacher-student network to learn robust visual representations without labeled data.
+
+---
+
+### 3. Deformable Convolution
+#### Standard vs. Deformable Comparison
+![Deformable Convolution](images/deformable_conv.png)  
+**Description**: Comparison between standard convolution (fixed grid) and deformable convolution (adaptive sampling locations). Enhances CNNs for irregular object shapes.
+
+#### Deformable Convolution in Action
+![Deformable Conv Visualization](images/Deformable_conv2.png)  
+**Description**: Visualization of deformable convolution offsets dynamically adjusting to object geometry.
+
+---
+
+### 5. Deformable DETR (Object Detection)
+![Deformable-DETR](images/Defromable-DETE.png)  
+**Description**: Combines deformable convolutions with Transformer attention for efficient object detection, reducing training complexity of vanilla DETR.
+
+---
+
+### 5. GIoU (Generalized Intersection over Union)
+![GIoU](images/GIOU.png)  
+**Description**: Improves bounding box regression by accounting for both overlap and enclosure, addressing limitations of standard IoU in non-overlapping cases.
+
+---
 
 
 # Model Evaluation Results
